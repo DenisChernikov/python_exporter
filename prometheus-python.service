@@ -1,0 +1,10 @@
+[Unit]
+Description=Prometheus Python Service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/prometheus-python-exporter/venv/bin/python3 /opt/prometheus-python-exporter/main.py
+
+[Install]
+WantedBy=multi-user.target
